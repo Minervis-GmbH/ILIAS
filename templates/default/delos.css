@@ -9017,17 +9017,13 @@ ul.dropdown-menu>li>.btn:focus {
     clear: both;
 }
 
-.il-item h4 {
-    padding-top: 0;
-    margin: 0;
-    font-size: 14px;
-    float: left;
+.il-item .il-item-title {
+  font-size: 14px;
 }
-
-.il-item h4 .btn-link,
-.il-item h4 a {
-    font-size: inherit;
-    line-height: 1.42857143;
+.il-item .il-item-title .btn-link,
+.il-item .il-item-title a {
+  font-size: inherit;
+  line-height: 1.42857143;
 }
 
 .il-item .il-item-divider {
@@ -9245,55 +9241,32 @@ ul.dropdown-menu>li>.btn:focus {
     padding: 3px 3px;
 }
 
-.breadcrumbs {
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    -ms-grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 3;
-    z-index: 998;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.breadcrumb_wrapper {
+  width: 100%;
+  display: inline-grid;
 }
-
-.breadcrumbs .breadcrumb_wrapper {
-    width: 100%;
-    display: inline-grid;
+.breadcrumb_wrapper .breadcrumb {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+  text-align: left;
+  margin: 0;
+  font-weight: 600;
+  font-size: 12px;
+  padding-left: 100px;
 }
-
-.breadcrumbs .breadcrumb {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    direction: rtl;
-    text-align: left;
-    margin: 0;
-    font-weight: 600;
-    font-size: 12px;
-    padding-left: 100px;
+.breadcrumb_wrapper .breadcrumb span.crumb {
+  color: #557196;
 }
-
-.breadcrumbs .breadcrumb span.crumb {
-    color: #557196;
+.breadcrumb_wrapper .breadcrumb span.crumb:hover {
+  color: #3a4c65;
 }
-
-.breadcrumbs .breadcrumb span.crumb:hover {
-    color: #3a4c65;
-}
-
-.breadcrumbs .breadcrumb>span+span:before {
-    content: " \e606";
-    color: #bbb;
-    padding: 8px 10px;
-    font-family: "il-icons";
+.breadcrumb_wrapper .breadcrumb > span + span:before {
+  content: " \e606";
+  color: #bbb;
+  padding: 8px 10px;
+  font-family: "il-icons";
 }
 
 
@@ -10527,6 +10500,25 @@ header {
     grid-column-end: 3;
     grid-row: 1;
     z-index: 999;
+}
+
+.breadcrumbs {
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  -ms-grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+  z-index: 998;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 div.il-system-infos {
