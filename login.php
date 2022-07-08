@@ -21,6 +21,8 @@ if (!file_exists(getcwd() . "/ilias.ini.php")) {
 require_once("Services/Init/classes/class.ilInitialisation.php");
 ilInitialisation::initILIAS();
 
+require_once("./saml_redirect.php");//SP-Lounge SAML SSO
+
 $ilCtrl->initBaseClass("ilStartUpGUI");
 $ilCtrl->setCmd('showLoginPageOrStartupPage');
 $ilCtrl->callBaseClass();
