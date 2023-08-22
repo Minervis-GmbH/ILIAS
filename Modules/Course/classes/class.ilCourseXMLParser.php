@@ -620,7 +620,7 @@ class ilCourseXMLParser extends ilMDSaxParser implements ilSaxSubsetParser
                     ilContainer::_writeContainerSetting(
                         $this->course_obj->getId(),
                         $this->current_container_setting,
-                        $this->cdata
+                        trim($this->cdata)
                     );
                 }
                 break;
